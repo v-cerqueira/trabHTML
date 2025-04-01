@@ -246,7 +246,7 @@ header a {
 /*Imagem principal Back*/
 
 .container.back .list .list-item:nth-child(1) img{
-    position: absolut;
+    position: absolute;
     bottom: 0;
     left: 0;
     animation: hideMainImage 0.5s linear 1 forwards;
