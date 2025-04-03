@@ -18,9 +18,11 @@ function moveItemsOnClick(type) {
         if (type === 'next') {
             list.appendChild(listitems[0]);
             tumb.appendChild(tumbitems[0]);
+            container.classList.add(next); // Adiciona a classe de animação
         } else {
             list.prepend(listitems[listitems.length - 1]);
             tumb.prepend(tumbitems[tumbitems.length - 1]);
+            container.classList.add(back); // Adiciona a classe de animação
         }
 
         // Remover classes de animação após completar o movimento
