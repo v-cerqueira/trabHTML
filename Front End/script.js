@@ -12,6 +12,7 @@ function moveItemsOnClick(type) {
     let listitems = document.querySelectorAll('.list .list-item');
     let tumbitems = document.querySelectorAll('.tumb .tumb-item');
 
+    
     setTimeout(() => {
         if (type === 'next') {
             list.appendChild(listitems[0]);
@@ -20,7 +21,7 @@ function moveItemsOnClick(type) {
         } else {
             list.prepend(listitems[listitems.length - 1]);
             tumb.prepend(tumbitems[tumbitems.length - 1]);
-            container.classList.add(back); // Adiciona a classe de animação
+            container.classList.add(tback); // Adiciona a classe de animação
         }
 
         // Remover classes de animação após completar o movimento
