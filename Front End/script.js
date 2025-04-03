@@ -12,8 +12,6 @@ function moveItemsOnClick(type) {
     let listitems = document.querySelectorAll('.list .list-item');
     let tumbitems = document.querySelectorAll('.tumb .tumb-item');
 
-    container.classList.add(type); // Adiciona a classe de animação
-
     setTimeout(() => {
         if (type === 'next') {
             list.appendChild(listitems[0]);
