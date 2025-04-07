@@ -13,19 +13,21 @@ body {
 }
 
 header {
-    width: 80%;
-    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(108, 101, 149, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    margin: auto;
+    justify-content: space-around;
+    padding: 7px 0;
+    z-index: 1000;
 }
 
 header a {
     color: #eee;
     margin-right: 40px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .container {
@@ -37,9 +39,9 @@ header a {
 }
 
 .container .list .list-item {
-   width: 100%;
-   height: 100%;
-   position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .container .list .list-item img {
@@ -70,10 +72,10 @@ header a {
 
 .container .list .list-item .buttons {
     display: grid;
-    grid-template-columns: repeat(2, 130px);
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     grid-template-rows: 40px;
     margin-top: 20px;
-    gap: 5px;
+    gap: 10px;
 }
 
 .container .list .list-item .buttons button {
@@ -109,14 +111,15 @@ header a {
     left: 50%;
     display: flex;
     gap: 20px;
-    transform: translateX(0); /* Inicialmente sem transformação */
-    transition: transform 0.5s ease-in-out; /* Adicionando transição suave */
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
 }
 
 .container .tumb .tumb-item {
     width: 135px;
     height: 200px;
     position: relative;
+    z-index: 2;
 }
 
 .container .tumb .tumb-item img {
@@ -136,11 +139,12 @@ header a {
 .container .arrows {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: clamp(8px, 2vw, 16px);
     position: absolute;
-    bottom: 120px;
-    left: 125px;
-    width: 300px;
+    bottom: clamp(60px, 12vw, 120px);
+    left: clamp(10px, 8vw, 125px);
+    width: clamp(200px, 50vw, 300px);
+    flex-wrap: wrap;
 }
 
 .container .arrows button {
@@ -160,13 +164,8 @@ header a {
     transition: 0.7s;
 }
 
-/* Animações para o movimento */
 .container.next .tumb {
-    animation: effectNextTumb 0.5s linear forwards;
-}
-
-.container.back .tumb {
-    animation: effectBackTumb 0.5s linear forwards;
+    animation: effectNextTumb 0.5s linear 1 forwards;
 }
 
 @keyframes effectNextTumb {
@@ -175,10 +174,8 @@ header a {
     }
 }
 
-/* Movimento ultima tumb*/
-
-.container.next .tumb-item:nth-last-child(1) {
-    animation: effectLastTumb 0.5s linear forwards;
+.container.next .tumb .tumb-item:nth-last-child(1) {
+    animation: effectLastTumb 0.5s linear 1 forwards;
 }
 
 @keyframes effectLastTumb {
@@ -186,43 +183,38 @@ header a {
         width: 0;
         opacity: 0;
     }
- }
+}
 
- /* Textos principais*/
-
- .container .list .list-item:nth-last-child(1) .content .title,
- .container .list .list-item:nth-last-child(1) .content .description,
- .container .list .list-item:nth-last-child(1) .content .buttons {
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description,
+.container .list .list-item:nth-last-child(1) .buttons {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
     animation: showContent 0.5s 1s linear 1 forwards;
- }
+}
 
- @keyframes showContent {
+@keyframes showContent {
     to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
- }
+}
 
- .container .list .list-item:nth-last-child(1) .content .title {
-    animation-delay: 1.2s;
- }
+.container .list .list-item:nth-last-child(1) .content .title {
+    animation-delay: 0.5s;
+}
 
- .container .list .list-item:nth-last-child(1) .content .description{
-    animation-delay: 1.6s;
- }
+.container .list .list-item:nth-last-child(1) .content .description {
+    animation-delay: 0.9s;
+}
 
- .container .list .list-item:nth-last-child(1) .content .buttons{
-    animation-delay: 2s;
- }
+.container .list .list-item:nth-last-child(1) .buttons {
+    animation-delay: 1.3s;
+}
 
- 
-    /*Imagem principal Next*/
-
-.container.next .list .list-item:nth-last-child(1) img{
+.container.next .list .list-item:nth-last-child(1) img {
     width: 150px;
     height: 220px;
     position: absolute;
@@ -230,37 +222,440 @@ header a {
     left: 50%;
     border-radius: 30px;
     animation: showMainImage 0.5s linear 1 forwards;
- }
+}
 
- @keyframes showMainImage {
-    to{
+@keyframes showMainImage {
+    to {
         bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
         border-radius: 0;
     }
-
 }
 
-/*Imagem principal Back*/
-
-.container.back .list .list-item:nth-child(1) img{
+.container.back .list .list-item:nth-child(1) img {
     position: absolute;
     bottom: 0;
     left: 0;
     animation: hideMainImage 0.5s linear 1 forwards;
     z-index: 2;
-
 }
 
 @keyframes hideMainImage {
-    to{
+    to {
         width: 135px;
         height: 200px;
         border-radius: 10px;
-        left: 50px;
+        left: 50%;
         bottom: 50px;
     }
-    
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container .list .list-item .content {
+        top: 15%;
+        right: 5%;
+        padding-right: 10%;
+        width: 90%;
+    }
+
+    .container .list .list-item .title {
+        font-size: 3em;
+    }
+
+    .container .list .list-item .description {
+        font-size: 1.2em;
+    }
+
+    .container .list .list-item .buttons {
+        grid-template-columns: repeat(2, 110px);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    header a {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .container .list .list-item .content {
+        top: 10%;
+        right: 5%;
+        padding-right: 0;
+        width: 90%;
+    }
+
+    .container .list .list-item .title {
+        font-size: 2.2em;
+    }
+
+    .container .list .list-item .description {
+        font-size: 1em;
+    }
+
+    .container .list .list-item .buttons {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .container .list .list-item .buttons button {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .container .tumb {
+        bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        transform: translateX(-50%);
+    }
+
+    .container .tumb .tumb-item {
+        width: 90px;
+        height: 140px;
+    }
+
+    .container .arrows {
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container .arrows button {
+        font-size: 1.2em;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .list .list-item .title {
+        font-size: 1.8em;
+    }
+
+    .container .list .list-item .description {
+        font-size: 0.9em;
+    }
+
+    .container .tumb .tumb-item {
+        width: 70px;
+        height: 100px;
+    }
+
+    .container .arrows button {
+        font-size: 1em;
+    }
+}
+
+/* PAGINA DE INFORMAÇÃO*/
+
+.info-page {
+    padding: 100px 10vw 50px 10vw;
+    background-color: #111;
+    min-height: 100vh;
+}
+
+.info-page section {
+    margin-bottom: 50px;
+}
+
+.info-page h1,
+.info-page h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 2em;
+    border-left: 5px solid #6c6595;
+    padding-left: 15px;
+}
+
+.info-page p,
+.info-page li {
+    color: #ccc;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+.info-page ul {
+    list-style: disc inside;
+    padding-left: 10px;
+}
+
+.info-page ul li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .info-page {
+        padding: 100px 6vw 50px 6vw;
+    }
+
+    .info-page h1,
+    .info-page h2 {
+        font-size: 1.5em;
+    }
+
+    .info-page p,
+    .info-page li {
+        font-size: 1em;
+    }
+}
+
+.contato {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(img/bali.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* garante que o blur não vaze */
+}
+
+.contato::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* escurece */
+    backdrop-filter: blur(4px);
+    /* aplica blur */
+    z-index: 0;
+}
+
+.contato>* {
+    position: relative;
+    z-index: 1;
+    /* garante que o conteúdo fique acima do overlay */
+}
+
+.contato .conteudo {
+    max-width: 800px;
+    text-align: center;
+
+}
+
+.contato .conteudo h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.contato .conteudo p {
+    font-weight: 300;
+    color: #fff;
+
+}
+
+.container1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container1 .contactinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1 .contactinfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container1 .contactinfo .box .icone {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+i.fas,
+i.fa,
+i.far,
+i.fab {
+    color: #333;
+}
+
+.container1 .contactinfo .box .texto {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container1 .contactinfo .box .texto {
+    font-weight: 500;
+    color: #cfdfe1;
+}
+
+.contactform {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+
+}
+
+.contactform h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+
+.contactform .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputBox input,
+.contactform .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.contactform .inputBox input:focus~span,
+.contactform .inputBox input:valid~span,
+.contactform .inputBox textarea:focus~span,
+.contactform .inputBox textarea:valid~span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translatey(-20px);
+}
+
+.contactform .inputBox input[type="submit"] {
+    width: 100px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .contato {
+        padding: 50px;
+    }
+
+    .container1 {
+        flex-direction: column;
+    }
+
+    .container1 .contactinfo {
+        margin-bottom: 40px;
+    }
+
+    .container1 .contactinfo,
+    .contactform {
+        width: 100%;
+
+    }
+}
+
+/* INFORMAÇÕES*/
+
+.container2 .destination img {
+    width: 100%;
+    height: 200px;
+    /* um pouco maior também */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container2 .destination {
+    background-color: #fff;
+    box-shadow: 4px 4px 12px #aaa;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 12px;
+    width: 300px;
+    /* aqui você controla o novo tamanho */
+    color: #333;
+    text-align: center;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* novo tamanho mínimo */
+    gap: 24px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.buy-button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    margin-top: 12px;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    /* espaço extra opcional */
 }

@@ -1,31 +1,40 @@
-let btnNext = document.querySelector('.next');
-let btnBack = document.querySelector('.back');
+let btnNext = document.querySelector('.next')
+let btnBack = document.querySelector('.back')
 
-let container = document.querySelector('.container');
-let list = document.querySelector('.container .list');
-let tumb = document.querySelector('.container .tumb');
+let container = document.querySelector('.container')
+let list = document.querySelector('.container .list')
+let tumb = document.querySelector('.container .tumb')
 
-btnNext.onclick = () => moveItemsOnClick('next');
-btnBack.onclick = () => moveItemsOnClick('back');
+btnNext.onclick = () => moveItemOnClick('next')
+btnBack.onclick = () => moveItemOnClick('back')
 
-function moveItemsOnClick(type) {
-    let listitems = document.querySelectorAll('.list .list-item');
-    let tumbitems = document.querySelectorAll('.tumb .tumb-item');
 
-    
+function moveItemOnClick(type){
+    let listItems = document.querySelectorAll('.list .list-item')
+    let tumbItems = document.querySelectorAll('.tumb .tumb-item')
+
+    //console.log(listItems)
+    //console.log(tumbItems)
+
+    if(type === 'next'){
+        list.appendChild(listItems[0])
+        tumb.appendChild(tumbItems[0])
+        container.classList.add('next')
+
+    } else {
+        list.prepend(listItems[listItems.length - 1])
+        tumb.prepend(tumbItems[tumbItems.length - 1])
+        container.classList.add('back')
+    }
+
     setTimeout(() => {
-        if (type === 'next') {
-            list.appendChild(listitems[0]);
-            tumb.appendChild(tumbitems[0]);
-            container.classList.add(next); // Adiciona a classe de animação
-        } else {
-            list.prepend(listitems[listitems.length - 1]);
-            tumb.prepend(tumbitems[tumbitems.length - 1]);
-            container.classList.add(tback); // Adiciona a classe de animação
-        }
+        container.classList.remove('back')
+        container.classList.remove('next')
 
-        // Remover classes de animação após completar o movimento
-        container.classList.remove('next');
-        container.classList.remove('back');
-    }, 3000); // Tempo igual ao da animação no CSS
+    }, 3000);
 }
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
