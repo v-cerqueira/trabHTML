@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Estilos e fontes -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,7 @@
     <title>Trab 1 Front End</title>
 </head>
 <body>
+    <!-- Cabeçalho com navegação -->
     <header>
         <nav>
             <a href="index.html">Home</a>
@@ -21,73 +23,63 @@
         </nav>
     </header>
 
+    <!-- Conteúdo principal -->
     <main class="container">
         <div class="list">
+            <!-- Item 1: Bali -->
             <div class="list-item">
                 <img src="./img/bali.jpg">
                 <div class="content">
                     <h2 class="title">BALI</h2>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, sint! Nisi iusto ipsam
-                        ad, quaerat modi neque officia minima earum odio vero. Explicabo numquam repellat dolore quod sapiente odio
-                        temporibus?</p>
-                        <div class="buttons">
-                            <button><a href="bali-compra.html" style="all: unset;">Saiba Mais</a></button>
-                            <button class="btn-login" onclick="window.location.href='login.html'">
-                                Login
-                              </button>
-                        </div>
+                    <p class="description">Bali, conhecida como a Ilha dos Deuses, é um paraíso tropical na Indonésia. Com praias de areias douradas, templos milenares, arrozais deslumbrantes e uma cultura vibrante, é o destino ideal para quem busca equilíbrio entre aventura e espiritualidade.</p>
+                    <div class="buttons">
+                        <button><a href="bali-compra.html" style="all: unset;">Saiba Mais</a></button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                    </div>
                 </div>
             </div>
-    
+
+            <!-- Item 2: Paris -->
             <div class="list-item">
                 <img src="./img/Paris.jpg">
                 <div class="content">
                     <h2 class="title">PARIS</h2>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, sint! Nisi iusto ipsam ad, quaerat modi
-                        neque officia minima earum odio vero. Explicabo numquam repellat dolore quod sapiente odio
-                        temporibus?</p>
+                    <p class="description">Paris, a charmosa Cidade Luz, encanta com sua atmosfera romântica, arquitetura clássica e gastronomia renomada. Visite a Torre Eiffel, caminhe pelas margens do Sena e descubra os segredos do Louvre e de Montmartre.</p>
                     <div class="buttons">
-                        <button>Saiba Mais</button>
-                        <button class="btn-login" onclick="window.location.href='login.html'">
-                            Login
-                          </button>
+                        <button><a href="paris-compra.html" style="all: unset;">Saiba Mais</a></button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
                     </div>
                 </div>
             </div>
-    
+
+            <!-- Item 3: Roma -->
             <div class="list-item">
                 <img src="./img/Roma.jpg">
                 <div class="content">
                     <h2 class="title">ROMA</h2>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, sint! Nisi iusto ipsam
-                        ad, quaerat modi neque officia minima earum odio vero. Explicabo numquam repellat dolore quod sapiente odio
-                        temporibus?</p>
+                    <p class="description">Roma é um verdadeiro museu a céu aberto. Entre ruínas históricas e fontes monumentais, como o Coliseu e a Fontana di Trevi, a capital italiana oferece uma experiência rica em história, arte e sabores inconfundíveis.</p>
                     <div class="buttons">
-                        <button>Saiba Mais</button>
-                        <button class="btn-login" onclick="window.location.href='login.html'">
-                            Login
-                          </button>
+                        <button><a href="roma-compra.html" style="all: unset;">Saiba Mais</a></button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
                     </div>
                 </div>
             </div>
-    
+
+            <!-- Item 4: Veneza -->
             <div class="list-item">
                 <img src="./img/veneza.jpg">
                 <div class="content">
                     <h2 class="title">VENEZA</h2>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, sint! Nisi iusto ipsam
-                        ad, quaerat modi neque officia minima earum odio vero. Explicabo numquam repellat dolore quod sapiente odio
-                        temporibus?</p>
+                    <p class="description">Veneza é um destino único, com seus canais encantadores, gôndolas românticas e pontes pitorescas. Explore a Praça de São Marcos, o Palácio Ducal e perca-se pelas ruas estreitas dessa cidade mágica construída sobre a água.</p>
                     <div class="buttons">
-                        <button>Saiba Mais</button>
-                        <button class="btn-login" onclick="window.location.href='login.html'">
-                            Login
-                          </button>
+                        <button><a href="veneza-compra.html" style="all: unset;">Saiba Mais</a></button>
+                        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Thumbnails de cidades -->
         <div class="tumb">
             <div class="tumb-item">
                 <img src="./img/bali.jpg" alt="foto-cidade">
@@ -120,29 +112,34 @@
                     <p>Visite Veneza</p>
                 </div>
             </div>
-
         </div>
         
+        <!-- Botões de navegação (slider?) -->
         <div class="arrows">
             <button class="back"> < </button>
             <button class="next"> > </button>
         </div>
-
     </main>
     
-<script src="./script.js"></script>
+    <!-- Script principal -->
+    <script src="./script.js"></script>
     
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
-  </div>
-  
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-  
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Informações sobre Destinos Turísticos</p>
+    </footer>
 </body>
 </html>

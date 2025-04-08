@@ -2,62 +2,78 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Ícones Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
 
-    <title>Login Viagens</title>
+  <title>Login Viagens</title>
 </head>
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="informação.html">Informação</a>
-        <a href="faleconosco.html">fale conosco</a>
-        <a href="login.html">Login</a>
-    </nav>
-</header>
 
 <body class="loginpage">
-    <main class="container_login">
-        <form>
-            <h1>Login Viaje já</h1>
-            <div class="input-boxlogin">
-                <input placeholder="Usuário" type="email">
-                <i class="bx bxs-user"></i>
-            </div>
-            <div class="input-boxlogin">
-                <input placeholder="Senha" type="password">
-                <i class="bx bxs-lock-alt"></i>
-            </div>
 
-            <div class="remember-forgot">
-                <label>
-                <input type="checkbox">
-                Lembrar Senha
-            </label>
-            <a href="#">Esqueci Senha</a>
-            </div>
+  <!-- Cabeçalho com navegação -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="informação.html">Informação</a>
+      <a href="faleconosco.html">Fale Conosco</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
 
-            <button type="submit" class="Login">Login</button>
+  <!-- Conteúdo principal da página de login -->
+  <main class="container_login">
+    <form action="#" method="POST">
+      <h1>Login Viaje Já</h1>
 
-            <div class="register-link">
-                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
-            </div>
-        </form>
-
-    </main>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
+      <!-- Campo de e-mail -->
+      <div class="input-boxlogin">
+        <input type="email" name="email" placeholder="Usuário" required />
+        <i class="bx bxs-user"></i>
       </div>
-      
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-</body>
 
+      <!-- Campo de senha -->
+      <div class="input-boxlogin">
+        <input type="password" name="senha" placeholder="Senha" required />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <!-- Checkbox lembrar e link de recuperação -->
+      <div class="remember-forgot">
+        <label>
+          <input type="checkbox" name="lembrar" />
+          Lembrar Senha
+        </label>
+        <a href="#">Esqueci Senha</a>
+      </div>
+
+      <!-- Botão de envio -->
+      <button type="submit" class="Login">Login</button>
+
+      <!-- Link para cadastro -->
+      <div class="register-link">
+        <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+      </div>
+    </form>
+  </main>
+
+  <!-- API de acessibilidade VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
 </html>

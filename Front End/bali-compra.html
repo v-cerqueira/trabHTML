@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra de Passagem - Bali, Indonésia</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> <!-- CSS externo -->
 </head>
 <body>
+
   <header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="informação.html">Informação</a>
-        <a href="faleconosco.html">fale conosco</a>
-        <a href="login.html">Login</a>
+      <!-- Links de navegação -->
+      <a href="index.html">Home</a>
+      <a href="informação.html">Informação</a>
+      <a href="faleconosco.html">fale conosco</a>
+      <a href="login.html">Login</a>
     </nav>
-</header>
-<div class="content-wrapper bali"></div>
+  </header>
+
+  <!-- Imagem de fundo específica para Bali -->
+  <div class="content-wrapper bali"></div>
 
   <div class="compraBali">
-    <div class="conteudo"> <!-- ADICIONADO -->
+    <div class="conteudo">
+      <!-- Preço da passagem -->
       <p>Preço: R$ 3.500,00 (ida e volta)</p>
   
+      <!-- Informações da viagem -->
       <h2>Detalhes da Viagem</h2>
       <div>
         <p><strong>Ida:</strong> 10 de Junho de 2025</p>
@@ -29,6 +35,7 @@
         <p><strong>Aeroporto de Chegada:</strong> Aeroporto Internacional Ngurah Rai (DPS)</p>
       </div>
   
+      <!-- Sugestões de hospedagem -->
       <h2>Onde se Hospedar</h2>
       <div>
         <p>Em Bali, recomendamos as seguintes opções de hospedagem:</p>
@@ -38,24 +45,26 @@
           <li><strong>Hotel 3:</strong> Ubud Village Resort & Spa - A partir de R$ 800,00 por noite.</li>
         </ul>
       </div>
-  
+
+      <!-- Link para voltar às opções -->
       <a class="botao-voltar" href="informação.html">Outras viagens</a>
-     
-    </div> <!-- FECHADO -->
+    </div>
   </div>
 
+  <!-- API VLibras para acessibilidade -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-  
+
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Informações sobre Destinos Turísticos</p>
   </footer>

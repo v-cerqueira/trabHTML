@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
+
   <title>Informações</title>
 </head>
 
 <body>
+  <!-- Cabeçalho com menu de navegação -->
   <header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="informação.html">Informação</a>
-        <a href="faleconosco.html">fale conosco</a>
-        <a href="login.html">Login</a>
+      <a href="index.html">Home</a>
+      <a href="informação.html">Informação</a>
+      <a href="faleconosco.html">fale conosco</a>
+      <a href="login.html">Login</a>
     </nav>
-</header>
+  </header>
 
+  <!-- Conteúdo principal -->
   <div class="content-wrapper">
     <div class="container2">
-      <!-- Bali -->
+
+      <!-- Destino: Bali -->
       <div class="destination">
         <img src="img/bali.jpg" alt="Bali">
         <h2>Bali, Indonésia</h2>
@@ -31,7 +37,7 @@
         </form>
       </div>
 
-      <!-- Veneza -->
+      <!-- Destino: Veneza -->
       <div class="destination">
         <img src="img/veneza.jpg" alt="Veneza">
         <h2>Veneza, Itália</h2>
@@ -42,7 +48,7 @@
         </form>
       </div>
 
-      <!-- Roma -->
+      <!-- Destino: Roma -->
       <div class="destination">
         <img src="img/roma.jpg" alt="Roma">
         <h2>Roma, Itália</h2>
@@ -53,7 +59,7 @@
         </form>
       </div>
 
-      <!-- Paris -->
+      <!-- Destino: Paris -->
       <div class="destination">
         <img src="img/paris.jpg" alt="Paris">
         <h2>Paris, França</h2>
@@ -63,20 +69,23 @@
           <button type="submit" class="buy-button">✈️ Saber mais</button>
         </form>
       </div>
+
     </div>
   </div>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Informações sobre Destinos Turísticos</p>
   </footer>
 
+  <!-- API VLibras de acessibilidade -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-  
+
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
