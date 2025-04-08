@@ -1,6 +1,6 @@
 # trabHTML 
 
-[Abrir index.html](./index.html)
+[Abrir index.html]([./index.html](https://v-cerqueira.github.io/trabHTML/Front%20End/index.html))
 
 
 # Projeto de Navegação Interativa - Trabalhando com Front-End
