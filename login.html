@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login Viagens</title>
+</head>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="informação.html">Informação</a>
+        <a href="faleconosco.html">fale conosco</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<body class="loginpage">
+    <main class="container_login">
+        <form>
+            <h1>Login Viaje já</h1>
+            <div class="input-boxlogin">
+                <input placeholder="Usuário" type="email">
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-boxlogin">
+                <input placeholder="Senha" type="password">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label>
+                <input type="checkbox">
+                Lembrar Senha
+            </label>
+            <a href="#">Esqueci Senha</a>
+            </div>
+
+            <button type="submit" class="Login">Login</button>
+
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </div>
+        </form>
+
+    </main>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+
+</html>
