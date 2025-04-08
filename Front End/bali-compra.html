@@ -9,36 +9,52 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="informação.html">Informação</a>
-      <a href="faleconosco.html">fale conosco</a>
+        <a href="index.html">Home</a>
+        <a href="informação.html">Informação</a>
+        <a href="faleconosco.html">fale conosco</a>
+        <a href="login.html">Login</a>
     </nav>
-  </header>
+</header>
+<div class="content-wrapper bali"></div>
 
-  <div class="">
-    <img src="img/bali1.jpg" alt="Bali" width="400">>
-    <p>Preço: R$ 3.500,00 (ida e volta)</p>
-
-    <h2>Detalhes da Viagem</h2>
-    <div>
-      <p><strong>Ida:</strong> 10 de Junho de 2025</p>
-      <p><strong>Volta:</strong> 20 de Junho de 2025</p>
-      <p><strong>Aeroporto de Partida:</strong> Aeroporto Internacional de São Paulo (GRU)</p>
-      <p><strong>Aeroporto de Chegada:</strong> Aeroporto Internacional Ngurah Rai (DPS)</p>
-    </div>
-
-    <h2>Onde se Hospedar</h2>
-    <div>
-      <p>Em Bali, recomendamos as seguintes opções de hospedagem:</p>
-      <ul>
-        <li><strong>Hotel 1:</strong> Four Seasons Resort Bali at Sayan - A partir de R$ 1.500,00 por noite.</li>
-        <li><strong>Hotel 2:</strong> The Mulia Bali - A partir de R$ 1.200,00 por noite.</li>
-        <li><strong>Hotel 3:</strong> Ubud Village Resort & Spa - A partir de R$ 800,00 por noite.</li>
-      </ul>
-    </div>
-
-    <a href="index.html">Voltar para a Página Principal</a>
+  <div class="compraBali">
+    <div class="conteudo"> <!-- ADICIONADO -->
+      <p>Preço: R$ 3.500,00 (ida e volta)</p>
+  
+      <h2>Detalhes da Viagem</h2>
+      <div>
+        <p><strong>Ida:</strong> 10 de Junho de 2025</p>
+        <p><strong>Volta:</strong> 20 de Junho de 2025</p>
+        <p><strong>Aeroporto de Partida:</strong> Aeroporto Internacional de São Paulo (GRU)</p>
+        <p><strong>Aeroporto de Chegada:</strong> Aeroporto Internacional Ngurah Rai (DPS)</p>
+      </div>
+  
+      <h2>Onde se Hospedar</h2>
+      <div>
+        <p>Em Bali, recomendamos as seguintes opções de hospedagem:</p>
+        <ul>
+          <li><strong>Hotel 1:</strong> Four Seasons Resort Bali at Sayan - A partir de R$ 1.500,00 por noite.</li>
+          <li><strong>Hotel 2:</strong> The Mulia Bali - A partir de R$ 1.200,00 por noite.</li>
+          <li><strong>Hotel 3:</strong> Ubud Village Resort & Spa - A partir de R$ 800,00 por noite.</li>
+        </ul>
+      </div>
+  
+      <a class="botao-voltar" href="informação.html">Outras viagens</a>
+     
+    </div> <!-- FECHADO -->
   </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
   <footer>
     <p>&copy; 2025 Informações sobre Destinos Turísticos</p>

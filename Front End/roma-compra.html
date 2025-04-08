@@ -4,107 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra de Passagem - Roma, Itália</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #3498db;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .content img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .price {
-      font-size: 1.5em;
-      color: #27ae60;
-      margin-top: 20px;
-    }
-
-    .section-title {
-      font-size: 1.5em;
-      color: #3498db;
-      margin-top: 30px;
-    }
-
-    .section-content {
-      font-size: 1.1em;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #3498db;
-      color: white;
-      padding: 10px;
-    }
-
-    .back-button {
-      background-color: #3498db;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-      text-decoration: none;
-    }
-
-    .back-button:hover {
-      background-color: #2980b9;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Compra de Passagem - Roma, Itália</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="informação.html">Informação</a>
+      <a href="faleconosco.html">fale conosco</a>
+      <a href="login.html">Login</a>
+    </nav>
   </header>
 
-  <div class="content">
-    <img src="https://example.com/roma.jpg" alt="Roma">
-    <p class="price">Preço: R$ 4.000,00 (ida e volta)</p>
+  <div class="compraRoma">
+    <div class="conteudo">
+      <p>Preço: R$ 4.000,00 (ida e volta)</p>
 
-    <div class="section-title">Detalhes da Viagem</div>
-    <div class="section-content">
-      <p><strong>Ida:</strong> 10 de Julho de 2025</p>
-      <p><strong>Volta:</strong> 20 de Julho de 2025</p>
-      <p><strong>Aeroporto de Partida:</strong> Aeroporto Internacional de São Paulo (GRU)</p>
-      <p><strong>Aeroporto de Chegada:</strong> Aeroporto Internacional Leonardo da Vinci (FCO)</p>
+      <h2>Detalhes da Viagem</h2>
+      <div>
+        <p><strong>Ida:</strong> 10 de Julho de 2025</p>
+        <p><strong>Volta:</strong> 20 de Julho de 2025</p>
+        <p><strong>Aeroporto de Partida:</strong> Aeroporto Internacional de São Paulo (GRU)</p>
+        <p><strong>Aeroporto de Chegada:</strong> Aeroporto Internacional Leonardo da Vinci (FCO)</p>
+      </div>
+
+      <h2>Onde se Hospedar</h2>
+      <div>
+        <p>Em Roma, recomendamos as seguintes opções de hospedagem:</p>
+        <ul>
+          <li><strong>Hotel 1:</strong> Hotel Artemide - A partir de R$ 1.500,00 por noite.</li>
+          <li><strong>Hotel 2:</strong> Hotel Nazionale - A partir de R$ 1.200,00 por noite.</li>
+          <li><strong>Hotel 3:</strong> Hotel Quirinale - A partir de R$ 1.000,00 por noite.</li>
+        </ul>
+      </div>
+
+      <a class="botao-voltar" href="informação.html">Outras viagens</a>
     </div>
-
-    <div class="section-title">Onde se Hospedar</div>
-    <div class="section-content">
-      <p>Em Roma, recomendamos as seguintes opções de hospedagem:</p>
-      <ul>
-        <li><strong>Hotel 1:</strong> Hotel Artemide - A partir de R$ 1.500,00 por noite.</li>
-        <li><strong>Hotel 2:</strong> Hotel Nazionale - A partir de R$ 1.200,00 por noite.</li>
-        <li><strong>Hotel 3:</strong> Hotel Quirinale - A partir de R$ 1.000,00 por noite.</li>
-      </ul>
-    </div>
-
-    <a href="index.html" class="back-button">Voltar para a Página Principal</a>
   </div>
 
   <footer>
